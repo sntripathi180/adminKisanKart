@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AdminAppKisan</string>
+    <string name="design_by_Team">Design By\n Team</string>
+    <string name="create_new_user">Create New User</string>
+        <string name="rupee_symbol">₹</string>
+</resources>
