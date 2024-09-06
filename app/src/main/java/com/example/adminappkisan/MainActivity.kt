@@ -31,5 +31,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        binding.outForDeliveryButton.setOnClickListener {
+            val intent=Intent(this,OutForDeliveryActivity::class.java)
+            startActivity(intent)
+        }
+        binding.profile.setOnClickListener {
+            val intent=Intent(this,AdminProfileActivity::class.java)
+            startActivity(intent)
+        }
+        binding.createUser.setOnClickListener {
+            val intent=Intent(this,CreateUserActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
