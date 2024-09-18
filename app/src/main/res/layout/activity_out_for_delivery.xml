@@ -6,11 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OutForDeliveryActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/arrow_left"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:drawableLeft="@drawable/arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         android:fontFamily="@font/yeon_sung"
         android:gravity="center"
         android:text="Out For Delivery"
@@ -18,8 +31,8 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.308"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/deliveryRecyclerView"

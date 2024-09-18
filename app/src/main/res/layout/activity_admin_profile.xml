@@ -7,11 +7,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminProfileActivity">
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/arrow_left"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:drawableLeft="@drawable/arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         android:fontFamily="@font/yeon_sung"
         android:gravity="center"
         android:text="Admin Profile"
@@ -19,20 +31,9 @@
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.308"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/yeon_sung"
-        android:text="Edit Your Profile"
-        android:textColor="@color/textColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/editButton"
@@ -53,16 +54,16 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:outlineSpotShadowColor="@color/textColor"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/edittextshape"
         android:elevation="2dp"
         android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23">
+        app:layout_constraintTop_toBottomOf="@+id/editButton">
 
         <TextView
             android:layout_width="match_parent"
@@ -70,7 +71,7 @@
             android:layout_weight="3"
             android:fontFamily="@font/yeon_sung"
             android:gravity="center"
-            android:paddingStart="15dp"
+            android:paddingStart="2dp"
             android:text="Name"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -85,7 +86,8 @@
             android:inputType="text"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
@@ -111,7 +113,7 @@
             android:layout_weight="3"
             android:fontFamily="@font/yeon_sung"
             android:gravity="center"
-            android:paddingStart="15dp"
+            android:paddingStart="2dp"
             android:text="Address"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -123,9 +125,10 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:fontFamily="@font/lato"
-            android:inputType="textImeMultiLine"
+            android:inputType="textMultiLine"
             android:padding="4dp"
-            android:text="Rampur,near fatehpur,out of kanpur" />
+            android:text="Rampur,near fatehpur,out of kanpur /n kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur kanpur"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
@@ -150,7 +153,7 @@
             android:layout_weight="3"
             android:fontFamily="@font/yeon_sung"
             android:gravity="center"
-            android:paddingStart="15dp"
+            android:paddingStart="2dp"
             android:text="Email"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -165,7 +168,8 @@
             android:inputType="textEmailAddress"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="ramu@gamil.com" />
+            android:text="ramu@gamil.com"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
@@ -190,7 +194,7 @@
             android:layout_weight="3"
             android:fontFamily="@font/yeon_sung"
             android:gravity="center"
-            android:paddingStart="15dp"
+            android:paddingStart="2dp"
             android:text="Phone"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -205,7 +209,8 @@
             android:inputType="phone"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="12XXXXXX23" />
+            android:text="12XXXXXX23"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
@@ -230,13 +235,13 @@
             android:layout_weight="3"
             android:fontFamily="@font/yeon_sung"
             android:gravity="center"
-            android:paddingStart="15dp"
+            android:paddingStart="2dp"
             android:text="Password"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="19sp" />
 
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_weight="1"
@@ -245,11 +250,13 @@
             android:inputType="textPassword"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="lodalassan" />
+            android:text="lodalassan"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveInfoButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
